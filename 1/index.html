@@ -3,15 +3,24 @@ cargado el DOM y otra después que las imágenes se hayan cargado.
 
 Tip: Investigar el evento window.onload
 
+NO LO VAMOS A HACER
 -->
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title> Página con muchas imágenes </title>
   </head>
   <body>
 
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+		$(document).ready (function(){
+			$(window)on("load", function(){
+				alert("images listeilor")
+			});
+		});
+	</script>
   </body>
 </html>

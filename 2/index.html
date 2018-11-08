@@ -11,9 +11,35 @@ de un segundo, al volver hacer click debe volver a estar en blanco y negro.
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Galería</title>
+    <style type="text/css" media="screen">
+    	.pic {
+		    -webkit-filter: grayscale(100%);
+    	}
+    	.normal {
+			filter: none;
+    	}
+    </style>
   </head>
   <body>
+	<div class="gallery">
+		<img class="pic" src="img-1.jpg">
+		<img class="pic" src="img-1.jpg">
+		<img class="pic" src="img-1.jpg">
+		<img class="pic" src="img-1.jpg">
+	</div>
 
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+		$(document).ready (function(){
+			
+
+
+			$(".pic").on("click", function(){
+					$(this).toggleClass("normal");
+				});
+
+		});
+	</script>
   </body>
 </html>
