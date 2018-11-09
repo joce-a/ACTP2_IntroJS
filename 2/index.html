@@ -8,16 +8,17 @@ de un segundo, al volver hacer click debe volver a estar en blanco y negro.
 -->
 
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>Galería</title>
     <style type="text/css" media="screen">
     	.pic {
 		    -webkit-filter: grayscale(100%);
+			transition: all 1s;
     	}
     	.normal {
-			filter: none;
+			filter: grayscale(0%);
     	}
     </style>
   </head>
@@ -33,10 +34,9 @@ de un segundo, al volver hacer click debe volver a estar en blanco y negro.
 	<script>
 		$(document).ready (function(){
 			
-
-
 			$(".pic").on("click", function(){
 					$(this).toggleClass("normal");
+				
 				});
 
 		});
